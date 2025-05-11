@@ -1,0 +1,68 @@
+/* global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* colors */
+
+:root {
+    /* primary */
+    --primary-color: #000000;
+
+    /* secondary color */
+    --blue: #377DFF;
+    --green: #38CB89;
+    --orange: #FFAB00;
+    --red: #FF5630;
+
+    /* neutral */
+    --neutral-7: #141718;
+    --neutral-6: #232627;
+    --neutral-5: #343839;
+    --neutral-4: #6C7275;
+    --neutral-3: #E8ECEF;
+    --neutral-2: #F3F5F7;
+    --neutral-1: #FEFEFE;
+}
+
+/* fonts */
+
+/* import and introduce fonts */
+/* import regular font */
+@font-face {
+    font-family: "elegant-regular";
+    src: url("../assets/font/IRANSansXFaNum-Regular.woff");
+}
+
+/* import demibold font */
+@font-face {
+    font-family: "elegant-demibold";
+    src: url("../assets/font/IRANSansXFaNum-DemiBold.woff");
+}
+
+/* import bold font */
+@font-face {
+    font-family: "elegant-bold";
+    src: url("../assets/font/IRANSansXFaNum-Bold.woff");
+}
+
+
+/* font classes */
+/* demibold font class */
+.elegant-demibold {
+    font-family: "elegant-demibold";
+}
+
+/* bold font class */
+.elegant-bold {
+    font-family: "elegant-bold";
+}
+
+/* body styles */
+
+body {
+    background: var(--neutral-1);
+    font-family: "elegant-regular";
+}

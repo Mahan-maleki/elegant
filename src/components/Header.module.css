@@ -1,0 +1,41 @@
+:root {
+    /* primary */
+    --primary-color: #000000;
+
+    /* secondary color */
+    --blue: #377DFF;
+    --green: #38CB89;
+    --orange: #FFAB00;
+    --red: #FF5630;
+
+    /* neutral */
+    --neutral-7: #141718;
+    --neutral-6: #232627;
+    --neutral-5: #343839;
+    --neutral-4: #6C7275;
+    --neutral-3: #E8ECEF;
+    --neutral-2: #F3F5F7;
+    --neutral-1: #FEFEFE;
+}
+
+.discount {
+    background: var(--neutral-3);
+    height: 3%;
+    padding: 8px 0px 8px 0px;
+}
+
+.discount span {
+    font-size: 14px;
+}
+
+@media screen and (max-width: 1622px) {
+    .discountLink {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 1333px) {
+    .discountLink {
+        display: none;
+    }
+}

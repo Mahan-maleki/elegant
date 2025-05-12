@@ -14,7 +14,7 @@ function Header() {
                 <TicketPercent color='#000' size={24} className='d-none d-lg-block' />
               </div>
               <div className="col-12 col-lg-3 d-flex d-lg-block justify-content-center">
-                <span>30% تخفیف بر روی تمامی محصولات | زمان محدود !</span>
+                <span className={css.discountTitle}>30% تخفیف بر روی تمامی محصولات | زمان محدود !</span>
               </div>
               <div className="col-1 d-none d-lg-block">
                 <NavLink to="/shop" className={"text-decoration-none " + css.discountLink}>برو به فروشگاه <ArrowLeft color='#377DFF' size={15} /></NavLink>

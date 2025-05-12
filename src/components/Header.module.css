@@ -45,3 +45,17 @@
         font-size: 12px !important;
     }
 }
+
+.header {
+    padding: 16px;
+}
+
+.menuList {
+    list-style: none;
+}
+
+.cartBadge {
+    width: 20px;
+    height: 20px;
+    background: var(--primary-color);
+}

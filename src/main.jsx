@@ -3,6 +3,10 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router";
 import App from "./App";
 import Shop from "./components/Shop"
+import Product from "./components/Product"
+import ContactUs from "./components/ContactUs"
+import SignIn from "./components/SignIn"
+import SignUp from "./components/SignUp"
 import "./assets/general.css"
 
 const root = document.getElementById("root");

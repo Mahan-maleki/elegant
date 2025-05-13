@@ -75,3 +75,27 @@
     height: 20px;
     background: var(--primary-color);
 }
+
+.mobileMenu {
+    width: 100vw;
+    height: 100vh;
+    background: #00000032;
+    position: absolute;
+    padding: 0 !important;
+    margin: 0 !important;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.offcanvas {
+    width: 90%;
+    height: 100%;
+    background: var(--neutral-2);
+    padding: 24px 50px;
+}
+
+.mobileMenuList {
+    list-style: none !important;
+}

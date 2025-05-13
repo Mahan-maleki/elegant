@@ -1,5 +1,5 @@
 import React from 'react'
-import { ArrowLeft, CircleUser, Search, ShoppingBag, TicketPercent } from 'lucide-react'
+import { ArrowLeft, CircleUser, Menu, Search, ShoppingBag, TicketPercent } from 'lucide-react'
 import { NavLink } from 'react-router'
 import css from "./Header.module.css"
 
@@ -23,11 +23,11 @@ function Header() {
           </div>
         </div>
       </div>
-      <div className="container">
+      <div className="container d-none d-lg-block">
         <div className={"row d-flex align-items-center " + css.header}>
           <div className="col-2 d-flex align-items-center">
             <NavLink to="/">
-              <img src="/Logo.svg" alt="logo" className={css.logo} />
+              <img src="/Logo.svg" alt="website logo" className={css.logo} />
             </NavLink>
           </div>
           <div className="col-8 d-flex align-items-center justify-content-center">
@@ -40,7 +40,7 @@ function Header() {
           <div className="col-2 d-flex align-items-center">
             <div className="row">
               <div className="col-3">
-                  <Search color='#000' size={24} strokeWidth={1.5} />
+                <Search color='#000' size={24} strokeWidth={1.5} />
               </div>
               <div className="col-3">
                 <CircleUser color='#000' size={24} strokeWidth={1.5} />
@@ -51,6 +51,22 @@ function Header() {
                   <span className='text-white'>0</span>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="container d-block d-lg-none">
+        <div className={"row " + css.mobileHeader}>
+          <div className="col-1">
+            <Menu color='#000' size={24} />
+          </div>
+          <div className="col-8">
+            <img src="/Logo.svg" alt="website logo" className='me-2' width={70} />
+          </div>
+          <div className="col-3 d-flex align-items-center">
+            <ShoppingBag color='#000' size={24} />
+            <div className={css.mobileCartBadge + " me-2 rounded-circle d-flex justify-content-center align-items-center"}>
+              <span className='text-white'>0</span>
             </div>
           </div>
         </div>

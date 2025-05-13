@@ -65,3 +65,13 @@
         display: none !important;
     }
 }
+
+.mobileHeader {
+    padding: 16px;
+}
+
+.mobileCartBadge {
+    width: 20px;
+    height: 20px;
+    background: var(--primary-color);
+}

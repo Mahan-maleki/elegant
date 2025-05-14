@@ -51,7 +51,7 @@ function Header() {
               <div className="col-5 d-flex align-items-center">
                 <ShoppingBag color='#000' size={24} strokeWidth={1.5} />
                 <div className={css.cartBadge + " me-2 rounded-circle d-flex justify-content-center align-items-center"}>
-                  <span className='text-white'>0</span>
+                  <span className='text-white'>2</span>
                 </div>
               </div>
             </div>
@@ -70,7 +70,7 @@ function Header() {
           <div className="col-3 d-flex align-items-center">
             <ShoppingBag color='#000' size={24} />
             <div className={css.mobileCartBadge + " me-2 rounded-circle d-flex justify-content-center align-items-center"}>
-              <span className='text-white'>0</span>
+              <span className='text-white'>2</span>
             </div>
           </div>
         </div>

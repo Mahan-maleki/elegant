@@ -126,3 +126,20 @@
     bottom: 0;
     right: 0;
 }
+
+.mobileCart {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: #00000032;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.mobileCartCount {
+    width: 90vw;
+    height: 100vh;
+    background: var(--neutral-1);
+}

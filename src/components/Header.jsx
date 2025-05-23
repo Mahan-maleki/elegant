@@ -2,10 +2,12 @@ import React, { useState } from 'react'
 import { ArrowLeft, CircleUser, Menu, Search, ShoppingBag, TicketPercent, X } from 'lucide-react'
 import { NavLink } from 'react-router'
 import css from "./Header.module.css"
+import CartProduct from './CartProduct'
 
 function Header() {
 
   const [menuStatus, setMenuStatus] = useState(false);
+  const [cartStatus, setCartStatus] = useState(false);
 
   return (
     <>
@@ -28,6 +30,46 @@ function Header() {
       </div>
       <div className="container d-none d-lg-block">
         <div className={"row d-flex align-items-center " + css.header}>
+          <div className={css.cartCont + ` d-${cartStatus == true ? "block" : "none"} z-2`}>
+            <div className={css.cart + " z-3"}>
+              <div className="col-12">
+                <div className="row px-5 py-4">
+                  <div className="col-12 d-flex align-items-center justify-content-between mb-5">
+                    <h3 className='elegant-bold mb-0'>سبد خرید</h3>
+                    <X color='#6C7275' size={24} onClick={() => setCartStatus(false)} />
+                  </div>
+                  <div className="col-12">
+                    <div className="row">
+                      <CartProduct img="/CartProductOne.png" title="میز پذیرایی" color="مشکی" price="1,500 تومانءء" />
+                      <CartProduct img="/CartProductTwo.png" title="میز پذیرایی" color="قرمز" price="1,500 تومانءء" />
+                      <CartProduct img="/CartProductThree.png" title="چراغ رومیزی" color="طلایی" price="500 تومانءء" />
+                    </div>
+                  </div>
+                  <div className="col-12 position-absolute bottom-0 start-0">
+                    <div className="row py-3">
+                      <div className="col-12 d-flex justify-content-between">
+                        <p>پیش پرداخت</p>
+                        <p className='elegant-bold'>1.75 میلیون تومانءء</p>
+                      </div>
+                      <hr className='w-75 mx-auto' />
+                      <div className="col-12 d-flex justify-content-between">
+                        <p className="fs-4 elegant-demibold">جمع کل</p>
+                        <p className='fs-5 elegant-bold'>3.5 میلیون تومانءء</p>
+                      </div>
+                      <div className="col-12">
+                        <div>
+                          <button className='w-100 btn btn-dark btn-lg py-3'><NavLink to={"/checkout"} className={"text-white text-decoration-none"}>تسویه حساب</NavLink></button>
+                        </div>
+                        <div className='mt-3 d-flex justify-content-center'>
+                          <span className='elegant-demibold text-center border-bottom border-black  border-2'><NavLink className="text-black text-decoration-none" to={"/cart"}>مشاهده سبدخرید</NavLink></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <div className="col-2 d-flex align-items-center">
             <NavLink to="/">
               <img src="/Logo.svg" alt="website logo" className={css.logo} />
@@ -49,7 +91,7 @@ function Header() {
                 <CircleUser color='#000' size={24} strokeWidth={1.5} />
               </div>
               <div className="col-5 d-flex align-items-center">
-                <ShoppingBag color='#000' size={24} strokeWidth={1.5} />
+                <ShoppingBag color='#000' size={24} strokeWidth={1.5} onClick={() => setCartStatus(true)}/>
                 <div className={css.cartBadge + " me-2 rounded-circle d-flex justify-content-center align-items-center"}>
                   <span className='text-white'>2</span>
                 </div>

@@ -46,6 +46,12 @@
     }
 }
 
+@media screen and (max-width: 1098px) {
+    .discountTitle {
+        font-size: 10px !important;
+    }
+}
+
 .header {
     padding: 16px;
 }
@@ -98,4 +104,25 @@
 
 .mobileMenuList {
     list-style: none !important;
+}
+
+.cartCont {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #00000032;
+}
+
+.cart {
+    width: 20vw;
+    height: 100vh;
+    background: var(--neutral-2);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
 }

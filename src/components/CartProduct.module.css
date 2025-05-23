@@ -1,0 +1,12 @@
+.title {
+    font-size: 14px;
+}
+
+.color {
+    font-size: 12px;
+    color: var(--neutral-4);
+}
+
+.price {
+    font-size: 14px;
+}

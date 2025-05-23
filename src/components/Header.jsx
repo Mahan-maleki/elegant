@@ -89,7 +89,9 @@ function Header() {
                 <Search color='#000' size={24} strokeWidth={1.5} />
               </div>
               <div className="col-3">
-                <CircleUser color='#000' size={24} strokeWidth={1.5} />
+                <NavLink to={"/signin"}>
+                  <CircleUser color='#000' size={24} strokeWidth={1.5} />
+                </NavLink>
               </div>
               <div className="col-5 d-flex align-items-center">
                 <ShoppingBag color='#000' size={24} strokeWidth={1.5} onClick={() => setCartStatus(true)} />

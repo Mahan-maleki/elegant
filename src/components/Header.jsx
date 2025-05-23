@@ -122,12 +122,44 @@ function Header() {
         <div className="row">
           <div className="col-11 p-0 m-0">
             <div className={css.mobileCartCount}>
-                <div className="row p-3">
-                  <div className="col-12 d-flex justify-content-between align-items-center">
-                    <p className='fs-2 elegant-demibold m-0'>سبدخرید</p>
-                    <X color='#6C7275' size={24} onClick={() => setMobileCart(false)} />
+              <div className="row p-3">
+                <div className="col-12">
+                  <div className="row">
+                    <div className="col-12 d-flex justify-content-between align-items-center">
+                      <p className='fs-2 elegant-demibold m-0'>سبدخرید</p>
+                      <X color='#6C7275' size={24} onClick={() => setMobileCart(false)} />
+                    </div>
+                    <div className="col-12">
+                      <div className="row">
+                        <CartProduct img="/public/CartProductOne.png" title="میز پذیرایی" color="مشکی" price="1.5 تومانءء" />
+                        <CartProduct img="/public/CartProductTwo.png" title="میز پذیرایی" color="قرمز" price="1.5 تومانءء" />
+                        <CartProduct img="/public/CartProductThree.png" title="چراغ رومیزی" color="طلایی" price="500 تومانءء" />
+                      </div>
+                    </div>
                   </div>
                 </div>
+                <div className="col-12 mt-5">
+                  <div className="row py-3">
+                    <div className="col-12 d-flex justify-content-between">
+                      <p>پیش پرداخت</p>
+                      <p className='elegant-bold'>1.75 میلیون تومانءء</p>
+                    </div>
+                    <hr className='w-75 mx-auto' />
+                    <div className="col-12 d-flex justify-content-between">
+                      <p className="fs-4 elegant-demibold">جمع کل</p>
+                      <p className='fs-5 elegant-bold'>3.5 میلیون تومانءء</p>
+                    </div>
+                    <div className="col-12">
+                      <div>
+                        <button className='w-100 btn btn-dark btn-lg py-3'><NavLink to={"/checkout"} className={"text-white text-decoration-none"}>تسویه حساب</NavLink></button>
+                      </div>
+                      <div className='mt-3 d-flex justify-content-center'>
+                        <span className='elegant-demibold text-center border-bottom border-black  border-2'><NavLink className="text-black text-decoration-none" to={"/cart"}>مشاهده سبدخرید</NavLink></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

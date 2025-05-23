@@ -8,6 +8,7 @@ function Header() {
 
   const [menuStatus, setMenuStatus] = useState(false);
   const [cartStatus, setCartStatus] = useState(false);
+  const [mobileCart, setMobileCart] = useState(false)
 
   return (
     <>
@@ -91,7 +92,7 @@ function Header() {
                 <CircleUser color='#000' size={24} strokeWidth={1.5} />
               </div>
               <div className="col-5 d-flex align-items-center">
-                <ShoppingBag color='#000' size={24} strokeWidth={1.5} onClick={() => setCartStatus(true)}/>
+                <ShoppingBag color='#000' size={24} strokeWidth={1.5} onClick={() => setCartStatus(true)} />
                 <div className={css.cartBadge + " me-2 rounded-circle d-flex justify-content-center align-items-center"}>
                   <span className='text-white'>2</span>
                 </div>
@@ -110,9 +111,23 @@ function Header() {
             <img src="/Logo.svg" alt="website logo" className='me-2' width={70} />
           </div>
           <div className="col-3 d-flex align-items-center">
-            <ShoppingBag color='#000' size={24} />
+            <ShoppingBag color='#000' size={24} onClick={() => setMobileCart(true)} />
             <div className={css.mobileCartBadge + " me-2 rounded-circle d-flex justify-content-center align-items-center"}>
               <span className='text-white'>2</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className={css.mobileCart + ` container-fluid d-${mobileCart == true ? "block" : "none"} d-lg-none`}>
+        <div className="row">
+          <div className="col-11 p-0 m-0">
+            <div className={css.mobileCartCount}>
+                <div className="row p-3">
+                  <div className="col-12 d-flex justify-content-between align-items-center">
+                    <p className='fs-2 elegant-demibold m-0'>سبدخرید</p>
+                    <X color='#6C7275' size={24} onClick={() => setMobileCart(false)} />
+                  </div>
+                </div>
             </div>
           </div>
         </div>
